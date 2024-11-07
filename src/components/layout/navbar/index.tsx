@@ -2,6 +2,9 @@ import Link from "next/link";
 import Form from 'next/form';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { Suspense } from "react";
+import CartModal from "@/components/cart/modal";
+import OpenWishlist from "@/components/wishlist/open-wishlist";
+import UserModal from "@/components/user/modal";
 
 export async function Navbar() {
 
@@ -68,8 +71,10 @@ export async function Navbar() {
             </Form>
             </Suspense>
           </div>
-          <div className="flex justify-end md:w-1/3">
-            ...
+          <div className="flex justify-end md:w-1/3 gap-4">
+            <UserModal/>
+            <OpenWishlist/>
+            <CartModal/>
           </div>
         </div>
       </nav>
