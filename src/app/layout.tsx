@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GeistSans } from 'geist/font/sans';
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${GeistSans.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="bg-neutral-50 font-sans text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white"
       >
         {children}
       </body>
