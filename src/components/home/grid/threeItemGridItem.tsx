@@ -1,5 +1,5 @@
 import { GridTileImage } from "./gridTileImage";
-import IphoneImage from "../../../public/iphone.webp"
+import IphoneImage from "../../../../public/iphone.webp"
 import Link from "next/link";
 
 export function ThreeItemGridItem({

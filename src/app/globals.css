@@ -32,13 +32,13 @@ body::-webkit-scrollbar-track {
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-  background: rgb(37, 99, 235);
+  background: #ffffff;
   border-radius: 4px;
 }
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-  background: rgb(37, 99, 235);
+  background: #ffffff;
 }
 
 /* width */
@@ -53,11 +53,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Handle */
 .carousel-scrollbar::-webkit-scrollbar-thumb {
-  background: rgb(37, 99, 235);
+  background: linear-gradient(to right, #2dd4bf, #14b8a6, #0d9488);;
   border-radius: 4px;
 }
 
 /* Handle on hover */
 .carousel-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgb(37, 99, 235);
+  background: linear-gradient(to right, #2dd4bf, #14b8a6, #0d9488);;
 }

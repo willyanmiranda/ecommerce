@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PcImage from "../../../public/pczin.jpg"
+import PcImage from "../../../../public/macbook.jpg"
 import { GridTileImage } from '../grid/gridTileImage';
 
 export async function Carousel() {
@@ -15,7 +15,7 @@ export async function Carousel() {
             <GridTileImage
             alt="teste"
             label={{
-                title: "PC Gamer",
+                title: "Macbook",
                 amount: "500",
                 currencyCode: "USD"
             }}

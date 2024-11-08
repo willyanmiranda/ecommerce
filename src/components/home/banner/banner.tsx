@@ -1,24 +1,34 @@
-import Link from "next/link";
+import WatchImage from "../../../../public/watch.png"
+import Image from "next/image";
 import React from "react";
 
 const Banner = () => {
   return (
-    <div className="py-20 pt-24 bg-gradient-to-l from-white to-blue-600">
-      <div className="text-center flex flex-col gap-y-5 items-center">
-        <h2 className="text-white text-8xl font-extrabold text-center mb-2 max-md:text-6xl max-[480px]:text-4xl">
-          INTRODUCING <span className="text-black">SINGI</span><span className="text-blue-600">TRONIC</span>
-        </h2>
-        <div>
-          <p className="text-white text-center text-2xl font-semibold max-md:text-xl max-[480px]:text-base">
-            Buy the latest electronics.
+    <div className="h-[700px] w-full max-lg:h-[900px] max-md:h-[750px]">
+      <div className="grid grid-cols-3 items-center justify-items-center px-10 gap-x-10 max-w-screen-2xl mx-auto h-full max-lg:grid-cols-1 max-lg:py-10 max-lg:gap-y-10">
+        <div className="flex flex-col gap-y-5 max-lg:order-last col-span-2">
+          <h1 className="text-6xl text-white font-bold mb-3 max-xl:text-5xl max-md:text-4xl max-sm:text-3xl">
+            THE PRODUCT OF THE FUTURE
+          </h1>
+          <p className="text-white max-sm:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi
+            iure laudantium necessitatibus ab, voluptates vitae ullam. Officia
+            ipsam iusto beatae nesciunt, consequatur deserunt minima maiores
+            earum obcaecati. Optio, nam!
           </p>
-          <p className="text-white text-center text-2xl font-semibold max-md:text-xl max-[480px]:text-base">
-            The best electronics for tech lovers.
-          </p>
-          <Link href="/shop" className="block text-blue-600 bg-white font-bold px-12 py-3 text-xl hover:bg-gray-100 w-96 mt-2  max-md:text-lg max-md:w-72 max-[480px]:w-60 mx-auto">
-            SHOP NOW
-          </Link>
+          <div className="flex gap-x-1 max-lg:flex-col max-lg:gap-y-1">
+            <button className="bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-bold px-12 py-3 max-lg:text-xl max-sm:text-lg rounded-lg">
+              BUY NOW
+            </button>
+          </div>
         </div>
+        <Image
+          src={WatchImage}
+          width={400}
+          height={400}
+          alt="smart watch"
+          className="max-md:w-[300px] max-md:h-[300px] max-sm:h-[250px] max-sm:w-[250px] w-auto h-auto"
+        />
       </div>
     </div>
   );
