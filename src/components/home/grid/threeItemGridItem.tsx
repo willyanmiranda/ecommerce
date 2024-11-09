@@ -1,11 +1,14 @@
 import { GridTileImage } from "./gridTileImage";
 import IphoneImage from "../../../../public/iphone.webp"
 import Link from "next/link";
+import { Product } from "@/types";
 
 export function ThreeItemGridItem({
+    product,
     size,
     priority
   }: {
+    product: Product;
     size: 'full' | 'half';
     priority?: boolean;
   }) {
@@ -15,21 +18,21 @@ export function ThreeItemGridItem({
       >
         <Link
           className="relative block aspect-square h-full w-full"
-          href={`/product`}
+          href={`/product/${product.slug}`}
           prefetch={true}
         >
           <GridTileImage
-            src={IphoneImage}
+            src={product.mainImage}
             fill
             sizes={
               size === 'full' ? '(min-width: 768px) 66vw, 100vw' : '(min-width: 768px) 33vw, 100vw'
             }
             priority={priority}
-            alt="tetse"
+            alt="teste"
             label={{
               position: size === 'full' ? 'center' : 'bottom',
-              title: "Iphone 16",
-              amount: "100",
+              title: product.title as string,
+              amount: product.price.toString(),
               currencyCode: "USD"
             }}
           />

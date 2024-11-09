@@ -9,7 +9,7 @@ import UserModal from "@/components/user/modal";
 export async function Navbar() {
 
     return (
-      <nav className="relative flex items-center justify-between p-4 lg:px-6">
+      <nav className="relative flex items-center justify-between px-10 p-4 lg:px-6">
         <div className="flex w-full items-center">
           <div className="flex w-full md:w-1/3">
             <Link
