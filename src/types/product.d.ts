@@ -17,3 +17,9 @@ export interface Product {
     categoryId: string;
     Category: Category;
 }
+
+export interface ProductImage {
+    imageID: string;
+    productID: string;
+    image: string;
+}
