@@ -11,6 +11,7 @@ interface ProductTemplateProps {
 
 export async function ProductTemplate({ product }: ProductTemplateProps) {
     const images = await getProductImages(product.id)
+    console.log(images)
     
     return (
      <>

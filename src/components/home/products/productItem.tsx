@@ -12,7 +12,7 @@ export function ProductItem({ product }: ProductItemProps) {
         <>
             <div
                 key={product.id}
-                className="aspect-square w-full flex-none "
+                className="aspect-square w-full max-h-72 flex-none "
             >
                 <Link
                 className="relative h-full w-full"

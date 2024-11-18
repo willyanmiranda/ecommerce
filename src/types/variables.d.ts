@@ -9,10 +9,10 @@ export interface Size {
 export interface ProductVariation {
     id: string;
     productId: string;
-    color: Color;
-    size: Size;
     price: number;
     stock: number;
+    Color: Color;
+    Size: Size;
 }
 
 export interface ProductVariationsResponse {

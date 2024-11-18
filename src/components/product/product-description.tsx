@@ -1,13 +1,17 @@
+import { getVariables } from "@/lib/variables";
 import Price from "../common/price";
 import Prose from "../common/prose";
 import { VariantSelector } from "./variant-selector";
+import { ProductClient } from "./product-client";
 import { Product } from "@/types";
 
 interface ProductTemplateProps {
   product: Product;
 }
 
-export function ProductDescription({ product }: ProductTemplateProps) {
+export async function ProductDescription({ product }: ProductTemplateProps) {
+    const variations = await getVariables(product.id);
+
     return (
       <>
         <div className="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
@@ -19,14 +23,10 @@ export function ProductDescription({ product }: ProductTemplateProps) {
             />
           </div>
         </div>
-        {/* <VariantSelector productId={product.id} /> */}
-        {product.description ? (
-          <Prose
-            className="mb-6 text-sm leading-tight dark:text-white/[60%]"
-            text={product.description}
-          />
-        ) : null}
-        
+        <ProductClient
+          product={product}
+          variations={variations.productVariations}
+        />
       </>
     );
 }
