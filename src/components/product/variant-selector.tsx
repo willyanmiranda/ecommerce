@@ -26,8 +26,6 @@ export function VariantSelector({ variations, onVariationSelect }: VariantSelect
 
   useEffect(() => {
     onVariationSelect(selectedVariation || null);
-    console.log("chamouuu")
-    console.log(selectedVariation)
   }, [selectedVariation, onVariationSelect, selectedColor, selectedSize]);
 
   return (
